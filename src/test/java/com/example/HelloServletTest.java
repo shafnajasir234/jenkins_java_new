@@ -3,6 +3,7 @@ package com.example;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class HelloServletTest {
 
@@ -15,6 +16,6 @@ class HelloServletTest {
 
     @Test
     void javaVersionShouldBeSupported() {
-        assertEquals(17, Runtime.version().feature());
+        assertTrue(Runtime.version().feature() >= 17);
     }
 }
